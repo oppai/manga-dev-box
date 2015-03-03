@@ -48,4 +48,8 @@ install 'ExecJS runtime' nodejs
 # Needed for docs generation.
 update-locale LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8
 
+install zsh tmux vim jq
+chsh -s `which zsh`
+git clone git@github.com:oppai/.dotfiles && cd ~/.dotfiles && sh ./setup.sh
+
 echo 'all set, rock on!'
