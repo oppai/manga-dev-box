@@ -1,10 +1,8 @@
-# A Virtual Machine for Ruby on Rails Core Development
+# A Virtual Machine for Ruby Development
 
 ## Introduction
 
-**Please note this VM is not designed for Rails application development, only Rails core development.**
-
-This project automates the setup of a development environment for working on Ruby on Rails itself. Use this virtual machine to work on a pull request with everything ready to hack and run the test suites.
+Ruby Development for MangaReco
 
 ## Requirements
 
@@ -16,8 +14,8 @@ This project automates the setup of a development environment for working on Rub
 
 Building the virtual machine is this easy:
 
-    host $ git clone https://github.com/rails/rails-dev-box.git
-    host $ cd rails-dev-box
+    host $ git clone https://github.com/oppai/mangareco-vagrant.git
+    host $ cd mangareco-vagrant
     host $ vagrant up
 
 That's it.
@@ -27,11 +25,8 @@ After the installation has finished, you can access the virtual machine with
     host $ vagrant ssh
     Welcome to Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-36-generic i686)
     ...
-    vagrant@rails-dev-box:~$
+    vagrant@mangareco:~$
 
-Port 3000 in the host computer is forwarded to port 3000 in the virtual machine. Thus, applications running in the virtual machine can be accessed via localhost:3000 in the host computer. Be sure the web server is bound to the IP 0.0.0.0, instead of 127.0.0.1, so it can access all interfaces:
-
-    bin/rails server -b 0.0.0.0
 
 ## What's In The Box
 
