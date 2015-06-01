@@ -44,11 +44,11 @@ install 'ExecJS runtime' nodejs
 update-locale LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8
 
 install zsh tmux tig vim jq
-chsh -s /bin/zsh vagrant
-su vagrant << EOF
-  if [ ! -f ~/.dotfiles ]; then
-    cd ~/ && git clone https://github.com/oppai/.dotfiles && cd ~/.dotfiles && sh ./setup.sh
-  fi
-EOF
+#chsh -s /usr/bin/zsh vagrant
+#su vagrant << EOF
+#  if [ ! -f ~/.dotfiles ]; then
+#    cd ~/ && git clone https://github.com/oppai/.dotfiles && cd ~/.dotfiles && sh ./setup.sh
+#  fi
+#EOF
 
 echo 'all set, rock on!'
