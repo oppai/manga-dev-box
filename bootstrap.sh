@@ -25,15 +25,10 @@ install memcached memcached
 install Redis redis-server
 install RabbitMQ rabbitmq-server
 
-install PostgreSQL postgresql postgresql-contrib libpq-dev
-sudo -u postgres createuser --superuser vagrant
-sudo -u postgres createdb -O vagrant activerecord_unittest
-sudo -u postgres createdb -O vagrant activerecord_unittest2
-
-debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
-debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
+debconf-set-selections <<< 'mysql-server mysql-server/root_password password '
+debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password '
 install MySQL mysql-server libmysqlclient-dev
-mysql -uroot -proot <<SQL
+mysql -uroot <<SQL
 CREATE USER 'manga'@'localhost';
 SQL
 
@@ -43,7 +38,10 @@ install 'ExecJS runtime' nodejs
 # Needed for docs generation.
 update-locale LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8
 
-install zsh tmux tig vim jq
+install Zsh zsh
+install Tmux tmux
+install Tig tigvim
+install JQ jq
 #chsh -s /usr/bin/zsh vagrant
 #su vagrant << EOF
 #  if [ ! -f ~/.dotfiles ]; then
