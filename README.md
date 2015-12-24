@@ -14,8 +14,8 @@ Ruby Development for MangaReco
 
 Building the virtual machine is this easy:
 
-    host $ git clone https://github.com/oppai/mangareco-vagrant.git
-    host $ cd mangareco-vagrant
+    host $ git clone https://github.com/oppai/manga-dev-box.git
+    host $ cd manga-dev-box
     host $ vagrant up
 
 That's it.
