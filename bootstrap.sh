@@ -20,10 +20,7 @@ echo installing Bundler
 gem install bundler -N >/dev/null 2>&1
 
 install Git git
-install SQLite sqlite3 libsqlite3-dev
-install memcached memcached
 install Redis redis-server
-install RabbitMQ rabbitmq-server
 
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password '
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password '
@@ -33,7 +30,6 @@ CREATE USER 'manga'@'localhost';
 SQL
 
 install 'Nokogiri dependencies' libxml2 libxml2-dev libxslt1-dev
-install 'ExecJS runtime' nodejs
 
 # Needed for docs generation.
 update-locale LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8
