@@ -24,7 +24,7 @@ install Redis redis-server
 
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password '
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password '
-install MySQL mysql-server libmysqlclient-dev
+install mysql-server libmysqlclient-dev
 mysql -uroot <<SQL
 CREATE USER 'manga'@'localhost';
 SQL
